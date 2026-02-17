@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevNest - Future of Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="cursor-glow"></div>
+
+  <div class="status-ticker">
+    <div class="container ticker-flex">
+      <div class="ticker-item system-status">
+        <span class="status-dot"></span>
+        <span class="ticker-label">All Systems Operational</span>
+      </div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item">
+        <span class="ticker-label">API Latency:</span>
+        <span class="ticker-value" id="latency-val">24ms</span>
+      </div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item">
+        <span class="ticker-label">Active Deployments:</span>
+        <span class="ticker-value" id="deploys-val">1,204</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="glass-header">
+    <nav class="container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-cube"></i> DevNest<span class="dot">.</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-item">Features</a>
+        <a href="#solutions" class="nav-item">Solutions</a>
+        <a href="#pricing" class="nav-item">Pricing</a>
+        <a href="#about" class="nav-item">About</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="btn-text" id="login-btn">Log In</a>
+        <a href="#" class="btn-primary" id="signup-btn">Get Started</a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text fade-in-up">
+          <div class="badge">
+            <span class="badge-icon"><i class="fa-solid fa-bolt"></i></span>
+            <span class="badge-text">v2.0 is now live</span>
+          </div>
+          <h1>Build correctly,<br> <span class="gradient-text">scale infinitely.</span></h1>
+          <p class="hero-desc">The ultimate platform for modern developers. Experience improved workflow, seamless
+            integration, and powerful analytics all in one place.</p>
+          <div class="hero-btns">
+            <a href="#" class="btn-primary large" id="hero-signup-btn">Start Building <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="btn-secondary large" id="watch-demo-btn"><i class="fa-solid fa-play"></i> Watch Demo</a>
+          </div>
+          <div class="trust-badge">
+            <p>Trusted by 10,000+ developers worldwide</p>
+            <div class="avatars">
+              <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="User">
+              <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=random" alt="User">
+              <img src="https://ui-avatars.com/api/?name=Alex+Jones&background=random" alt="User">
+              <span class="more">+2k</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-in-delay">
+          <div class="glass-card main-card floating">
+            <div class="card-header">
+              <div class="dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="card-title">dashboard.tsx</span>
+            </div>
+            <div class="card-body">
+              <div class="code-line"><span class="keyword">import</span> React <span class="keyword">from</span>
+                'react';</div>
+              <div class="code-line"><span class="keyword">const</span> App = () => {</div>
+              <div class="code-line indent"> <span class="keyword">return</span> (</div>
+              <div class="code-line indent-2"> &lt;<span class="tag">DevNest</span> /&gt;</div>
+              <div class="code-line indent"> );</div>
+              <div class="code-line">};</div>
+              <div class="chart-mockup">
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 40%"></div>
+                <div class="bar" style="height: 90%"></div>
+                <div class="bar" style="height: 70%"></div>
+              </div>
+            </div>
+            <div class="bg-blur-circle"></div>
+          </div>
+          <div class="glass-card small-card float-delayed">
+            <i class="fa-solid fa-check-circle success-icon"></i>
+            <div class="small-card-text">
+              <h4>Build Passed</h4>
+              <p>Just now</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bg-glow"></div>
+    </section>
+
+
+
+
+
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Powerful features for <br><span class="gradient-text">modern teams</span></h2>
+          <p>Everything you need to ship faster and better.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card fade-in-up">
+            <div class="icon-box">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3>Lightning Fast</h3>
+            <p>Optimized for speed with edge computing capabilities that deliver content instantly.</p>
+          </div>
+          <div class="feature-card fade-in-up delay-1">
+            <div class="icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Secure by Design</h3>
+            <p>Enterprise-grade security with automated compliance checks and encryption.</p>
+          </div>
+          <div class="feature-card fade-in-up delay-2">
+            <div class="icon-box">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>AI Integrated</h3>
+            <p>Smart suggestions and automated code refactoring powered by advanced AI.</p>
+          </div>
+          <div class="feature-card fade-in-up">
+            <div class="icon-box">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Real-time Analytics</h3>
+            <p>Track performance metrics and user engagement in real-time dashboards.</p>
+          </div>
+          <div class="feature-card fade-in-up delay-1">
+            <div class="icon-box">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <h3>Team Collaboration</h3>
+            <p>Built-in tools for code review, pair programming, and seamless communication.</p>
+          </div>
+          <div class="feature-card fade-in-up delay-2">
+            <div class="icon-box">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <h3>One-click Deploy</h3>
+            <p>Push to production instantly with our integrated CI/CD pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="solutions">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Tailored <span class="gradient-text">Solutions</span></h2>
+          <p>We provide specialized platforms for every stage of your development journey.</p>
+        </div>
+        <div class="solutions-grid">
+          <div class="glass-card solution-card fade-in-up">
+            <div class="solution-content">
+              <span class="solution-tag">For Startups</span>
+              <h3>Launch Fast</h3>
+              <p>Everything you need to go from idea to MVP in weeks. Scalable infrastructure that grows with you.</p>
+              <ul class="solution-list">
+                <li><i class="fa-solid fa-check"></i> Rapid Prototyping</li>
+                <li><i class="fa-solid fa-check"></i> Integrated Auth & DB</li>
+                <li><i class="fa-solid fa-check"></i> Free Tier to Start</li>
+              </ul>
+            </div>
+            <div class="solution-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+          </div>
+          <div class="glass-card solution-card fade-in-up delay-1">
+            <div class="solution-content">
+              <span class="solution-tag">For Enterprise</span>
+              <h3>Scale Securely</h3>
+              <p>Advanced security, compliance, and dedicated support for large-scale production environments.</p>
+              <ul class="solution-list">
+                <li><i class="fa-solid fa-check"></i> SSO & SOC2 Compliance</li>
+                <li><i class="fa-solid fa-check"></i> Custom SLA</li>
+                <li><i class="fa-solid fa-check"></i> Dedicated Infrastructure</li>
+              </ul>
+            </div>
+            <div class="solution-icon">
+              <i class="fa-solid fa-building-shield"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Simple, <span class="gradient-text">Transparent</span> Pricing</h2>
+          <p>Choose the plan that's right for you. No hidden fees, no surprises.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="glass-card pricing-card fade-in-up">
+            <div class="pricing-header">
+              <h3>Starter</h3>
+              <div class="price">$0<span>/mo</span></div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Basic Analytics</li>
+              <li><i class="fa-solid fa-check"></i> 1 Project</li>
+              <li><i class="fa-solid fa-check"></i> Community Support</li>
+            </ul>
+            <a href="#" class="btn-secondary" id="starter-plan-btn">Get Started</a>
+          </div>
+          <div class="glass-card pricing-card popular fade-in-up delay-1">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Professional</h3>
+              <div class="price">$49<span>/mo</span></div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Advanced Analytics</li>
+              <li><i class="fa-solid fa-check"></i> 10 Projects</li>
+              <li><i class="fa-solid fa-check"></i> Priority Support</li>
+              <li><i class="fa-solid fa-check"></i> Custom Domains</li>
+            </ul>
+            <a href="#" class="btn-primary" id="pro-plan-btn">Go Pro</a>
+          </div>
+          <div class="glass-card pricing-card fade-in-up delay-2">
+            <div class="pricing-header">
+              <h3>Enterprise</h3>
+              <div class="price">$199+<span>/mo</span></div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Unlimited Everything</li>
+              <li><i class="fa-solid fa-check"></i> Custom SLAs</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated Manager</li>
+              <li><i class="fa-solid fa-check"></i> On-premise Options</li>
+            </ul>
+            <a href="#" class="btn-secondary" id="ent-plan-btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-content">
+        <div class="about-text fade-in-up">
+          <h2>About <span class="gradient-text">DevNest</span></h2>
+          <p>DevNest was born from a simple idea: that development shouldn't be a chore. We objective to provide the
+            best tools for the modern web, focusing on speed, security, and developer experience.</p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">10k+</span>
+              <span class="stat-label">Users</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5M+</span>
+              <span class="stat-label">Deploys</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Uptime</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual fade-in-up delay-1">
+          <div class="glass-card info-card">
+            <div class="card-header">
+              <span class="card-title">our_mission.json</span>
+            </div>
+            <div class="card-body">
+              <pre><code>{
+  "vision": "Empower builders",
+  "values": ["Speed", "Trust", "Innovation"],
+  "status": "scaling_up"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box glass-panel fade-in-up">
+          <div class="cta-content">
+            <h2>Ready to transform your workflow?</h2>
+            <p>Join thousands of developers building the future with DevNest today.</p>
+            <div class="cta-actions">
+              <a href="#" class="btn-primary large" id="cta-signup-btn">Get Started Now</a>
+              <a href="#" class="btn-text item-light">Contact Sales</a>
+            </div>
+          </div>
+          <div class="cta-visual">
+            <i class="fa-brands fa-react floating-icon icon-1"></i>
+            <i class="fa-brands fa-node floating-icon icon-2"></i>
+            <i class="fa-brands fa-python floating-icon icon-3"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-cube"></i> DevNest<span class="dot">.</span>
+        </a>
+        <p>Empowering developers to build the impossible. The next generation of development tools is here.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2024 DevNest Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-container glass-card" id="modal-container">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+
+      <!-- Login Modal Content -->
+      <div class="modal-content" id="login-modal-content">
+        <div class="modal-header">
+          <h2>Welcome <span class="gradient-text">Back</span></h2>
+          <p>Sign in to your DevNest account to continue.</p>
+        </div>
+        <form id="login-form" class="modal-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn-primary w-full">Sign In</button>
+        </form>
+        <p class="modal-footer">Don't have an account? <a href="#" id="switch-to-signup">Sign up</a></p>
+      </div>
+
+      <!-- Signup Modal Content -->
+      <div class="modal-content hidden" id="signup-modal-content">
+        <div class="modal-header">
+          <h2>Get <span class="gradient-text">Started</span></h2>
+          <p>Join 10,000+ developers building with DevNest.</p>
+        </div>
+        <form id="signup-form" class="modal-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="••••••••" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-role">Your Role</label>
+            <select id="signup-role">
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="manager">Product Manager</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary w-full">Create Account</button>
+        </form>
+        <p class="modal-footer">Already have an account? <a href="#" id="switch-to-login">Log in</a></p>
+      </div>
+
+      <!-- Watch Demo Modal Content -->
+      <div class="modal-content hidden" id="video-modal-content">
+        <div class="modal-header">
+          <h2>Product <span class="gradient-text">Demo</span></h2>
+          <p>See how DevNest transforms your development workflow.</p>
+        </div>
+        <div class="video-mockup">
+          <div class="video-overlay">
+            <i class="fa-solid fa-play-circle"></i>
+          </div>
+          <div class="video-controls">
+            <div class="progress-bar-container">
+              <div class="progress-bar" id="demo-progress"></div>
+            </div>
+            <div class="controls-row">
+              <span class="time">0:45 / 2:30</span>
+              <div class="volume-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="dummy-profile">
+          <div class="profile-item">
+            <span class="profile-label">Views</span>
+            <span class="profile-value">124,502</span>
+          </div>
+          <div class="profile-item">
+            <span class="profile-label">Release Date</span>
+            <span class="profile-value">Feb 15, 2026</span>
+          </div>
+          <div class="profile-item">
+            <span class="profile-label">Quality</span>
+            <span class="profile-value">4K Ultra HD</span>
+          </div>
+        </div>
+        <button class="btn-primary w-full" id="demo-signup-btn">Start Free Trial</button>
+      </div>
+
+      <!-- Success Content (Dummy Data Interaction) -->
+      <div class="modal-content hidden" id="success-modal-content">
+        <div class="success-visual">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="modal-header">
+          <h2>Success!</h2>
+          <p id="success-message">You have successfully signed in.</p>
+        </div>
+        <div class="dummy-profile" id="dummy-profile">
+          <!-- Populated by JS -->
+        </div>
+        <button class="btn-secondary w-full" id="close-success">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
