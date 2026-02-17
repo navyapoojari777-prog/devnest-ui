@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   --bg-dark: #0a0a0f;
   --bg-card: rgba(255, 255, 255, 0.05);
@@ -100,15 +101,16 @@ body {
   }
 }
 
-@media (max-width: 640px) {
-  .ticker-divider {
-    display: none;
-  }
-
+@media (max-width: 1024px) {
   .ticker-flex {
-    flex-direction: column;
-    gap: 4px;
-    text-align: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-ticker {
+    display: none;
+    /* Hide ticker on small mobile to save vertical space/overlap */
   }
 }
 
@@ -192,7 +194,29 @@ ul {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
   z-index: 1000;
-  transition: padding 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Compensate for Ticker Height if present */
+body {
+  padding-top: 0;
+}
+
+.status-ticker+.glass-header {
+  top: 0;
+  /* Default */
+}
+
+@media (min-width: 769px) {
+  .status-ticker+.glass-header {
+    top: 37px;
+    /* Height of ticker roughly */
+  }
+
+  .hero {
+    padding-top: 157px;
+    /* 120 + 37 */
+  }
 }
 
 .glass-header.scrolled {
@@ -277,7 +301,7 @@ ul {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -303,6 +327,22 @@ ul {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    /* JS handles this */
+  }
+
+  .nav-actions #login-btn {
+    display: none;
+  }
 }
 
 /* Hero Section */
@@ -361,6 +401,53 @@ ul {
   max-width: 500px;
 }
 
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-primary.large,
+  .btn-secondary.large {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .hero-btns {
   display: flex;
   gap: 1.5rem;
@@ -400,6 +487,8 @@ ul {
   border-radius: 50%;
   border: 2px solid var(--bg-dark);
   margin-right: -10px;
+  object-fit: cover;
+  background: #1e293b;
 }
 
 .avatars .more {
