@@ -198,6 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden'; // Prevent scroll
   };
 
+  window.openModal = openModal;
+
   const closeModal = () => {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
